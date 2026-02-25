@@ -1,0 +1,9 @@
+{
+  "frontend/src/lib/types.ts": "Defines the local `Invoice` interface (not exported by the backend) matching the backend's Invoice structure, with all required fields typed using bigint for numeric IDs and timestamps.",
+  "frontend/src/hooks/useQueries.ts": "All React Query hooks for CRUD operations on customers, products, invoices, and expenses; updated to import `Invoice` from the local `lib/types` instead of the missing backend export.",
+  "frontend/src/components/CustomerDetail.tsx": "Modal dialog showing full customer info and their associated invoices list; updated to import `Invoice` from `lib/types` instead of the backend module.",
+  "frontend/src/components/InvoiceDetail.tsx": "Modal dialog displaying invoice details with line items, totals, and a status update dropdown; updated to import `Invoice` from `lib/types`.",
+  "frontend/src/pages/Invoices.tsx": "Full invoices list page with status filtering, table display, and modals for creating and viewing invoices; updated to import `Invoice` from `lib/types`.",
+  "frontend/src/pages/Reports.tsx": "Complete reports page with monthly revenue bar chart by year, top 5 best-selling products list, and current month revenue vs expenses profit summary.",
+  "frontend/src/lib/utils.ts": "Utility functions including `formatCurrency` (now using `en-IN` locale and `INR` currency to display ₹ symbol), `formatDate`, date/time helpers, ID generator, and month name constants."
+}

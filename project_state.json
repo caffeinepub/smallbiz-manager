@@ -1,0 +1,140 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Small business all-in-one management application to solve common business problems (inventory, customers, invoicing, expenses, etc.) using Indian Rupees (₹) as the currency.",
+  "architectural_notes": [
+    "Currency: Use Indian Rupees (₹) instead of US Dollars ($) for all monetary values and displays"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-design-and-apply-a-cohesive-visual-theme-throughout-the-application-use-a-professional-clean-aesthetic-with-a-warm-amber-green-color-palette-modern-sans-serif-typography-card-based-layouts-and-clear-iconography-that-conveys-trust-and-productivity-for-small-business-owners",
+      "title": "Design and apply a cohesive visual theme throughout the application: use a professional, clean aesthetic with a warm amber/green color palette, modern sans-serif typography, card-based layouts, and clear iconography that conveys trust and productivity for small business owners.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-dashboard-page-that-displays-key-business-metrics-total-revenue-sum-of-paid-invoices-number-of-active-customers-number-of-products-with-low-stock-quantity-5-count-of-unpaid-overdue-invoices-and-a-simple-monthly-revenue-summary-list-for-the-current-year",
+      "title": "Build a Dashboard page that displays key business metrics: total revenue (sum of paid invoices), number of active customers, number of products with low stock (quantity < 5), count of unpaid/overdue invoices, and a simple monthly revenue summary list for the current year.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-customer-management-crm-module-where-users-can-add-view-edit-and-delete-customers-the-customer-list-should-be-searchable-by-name-or-email-each-customer-detail-view-should-show-their-associated-invoices",
+      "title": "Build a Customer Management (CRM) module where users can add, view, edit, and delete customers. The customer list should be searchable by name or email. Each customer detail view should show their associated invoices.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-inventory-and-product-management-module-where-users-can-add-view-edit-and-delete-products-display-stock-levels-prominently-and-highlight-products-with-low-stock-quantity-5-with-a-warning-indicator",
+      "title": "Build an Inventory and Product Management module where users can add, view, edit, and delete products. Display stock levels prominently and highlight products with low stock (quantity < 5) with a warning indicator.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-invoicing-and-billing-module-where-users-can-create-invoices-by-selecting-a-customer-and-adding-line-items-product-quantity-unit-price-users-can-update-invoice-status-draft-sent-paid-overdue-and-view-an-invoice-summary",
+      "title": "Build an Invoicing and Billing module where users can create invoices by selecting a customer and adding line items (product, quantity, unit price). Users can update invoice status (draft, sent, paid, overdue) and view an invoice summary.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-expense-tracking-module-where-users-can-log-view-edit-and-delete-business-expenses-each-expense-has-a-category-amount-description-and-date-display-a-summary-of-total-expenses-grouped-by-category",
+      "title": "Build an Expense Tracking module where users can log, view, edit, and delete business expenses. Each expense has a category, amount, description, and date. Display a summary of total expenses grouped by category.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-sales-and-revenue-reporting-module-that-shows-total-revenue-by-month-for-a-selectable-year-top-5-best-selling-products-by-quantity-sold-and-a-breakdown-of-expenses-vs-revenue-for-the-current-month",
+      "title": "Build a Sales and Revenue Reporting module that shows: total revenue by month for a selectable year, top 5 best-selling products by quantity sold, and a breakdown of expenses vs revenue for the current month.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-sidebar-navigation-that-links-to-all-modules-dashboard-customers-inventory-invoices-expenses-and-reports-the-active-section-should-be-visually-highlighted-the-app-name-bizsolve-and-a-logo-icon-should-appear-at-the-top-of-the-sidebar-render-the-generated-logo-image-from-frontend-public-assets-generated-bizsolve-logo-dim-128x128-png",
+      "title": "Implement a sidebar navigation that links to all modules: Dashboard, Customers, Inventory, Invoices, Expenses, and Reports. The active section should be visually highlighted. The app name 'BizSolve' and a logo icon should appear at the top of the sidebar. Render the generated logo image from frontend/public/assets/generated/bizsolve-logo.dim_128x128.png.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-convert-all-currency-displays-throughout-the-application-from-us-dollars-to-indian-rupees-update-the-currency-formatting-utility-in-frontend-src-lib-utils-ts-so-that-the-formatcurrency-or-equivalent-function-uses-the-en-in-locale-and-inr-currency-code-rendering-the-symbol-instead-of-ensure-this-change-propagates-to-all-pages-and-components-that-display-monetary-values-dashboard-metrics-total-revenue-monthly-revenue-summary-invoices-line-item-prices-totals-invoice-summary-expenses-amounts-category-summaries-inventory-products-unit-prices-reports-revenue-charts-expense-vs-revenue-breakdown-top-products",
+      "title": "Convert all currency displays throughout the application from US Dollars ($) to Indian Rupees (₹). Update the currency formatting utility in frontend/src/lib/utils.ts so that the formatCurrency (or equivalent) function uses the 'en-IN' locale and 'INR' currency code, rendering the ₹ symbol instead of $. Ensure this change propagates to all pages and components that display monetary values: Dashboard metrics (total revenue, monthly revenue summary), Invoices (line item prices, totals, invoice summary), Expenses (amounts, category summaries), Inventory/Products (unit prices), Reports (revenue charts, expense vs revenue breakdown, top products).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Dashboard with key business metrics overview",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Customer management (CRM) module",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Inventory/product management module",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Invoicing and billing module",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Expense tracking module",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Basic sales/revenue reporting",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Create a backend data model and storage for the core business entities: Customers (id, name, email, phone, address, createdAt), Products/Inventory (id, name, description, price, stockQuantity, category), Invoices (id, customerId, lineItems, totalAmount, status, issuedAt, dueDate), Expenses (id, category, amount, description, date), and Sales records derived from paid invoices.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Convert all currency displays from dollars ($) to Indian Rupees (₹) throughout the application",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "SmallBiz Manager",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

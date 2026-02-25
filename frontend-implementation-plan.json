@@ -1,0 +1,77 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Convert all currency displays from USD ($) to Indian Rupees (₹)",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "summary": "Convert all currency displays throughout the application from US Dollars ($) to Indian Rupees (₹) by updating the formatCurrency utility function and ensuring the change propagates to all pages and components that display monetary values",
+      "acceptanceCriteria": [
+        "The formatCurrency utility uses locale 'en-IN' and currency 'INR', displaying ₹ symbol.",
+        "Dashboard total revenue and monthly revenue figures display with ₹ symbol.",
+        "Invoice line item prices, subtotals, and totals display with ₹ symbol.",
+        "Expense amounts and category-grouped totals display with ₹ symbol.",
+        "Product/Inventory unit prices display with ₹ symbol.",
+        "Reports page revenue bars, expense vs revenue comparison, and top products revenue display with ₹ symbol.",
+        "No $ symbol appears anywhere in the application UI."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/lib/utils.ts",
+          "operation": "modify",
+          "description": "Update the formatCurrency function to use locale 'en-IN' and currency code 'INR' instead of 'en-US' and 'USD', ensuring the ₹ symbol is displayed for all monetary values. This change will automatically propagate to all components and pages that call this utility function."
+        },
+        {
+          "path": "frontend/src/pages/Dashboard.tsx",
+          "operation": "modify",
+          "description": "Verify that all currency displays in Dashboard metric cards (total revenue, monthly revenue summary) and the recent invoices list correctly use the updated formatCurrency utility and display the ₹ symbol. No code changes should be needed if the utility is correctly imported and used."
+        },
+        {
+          "path": "frontend/src/pages/Invoices.tsx",
+          "operation": "modify",
+          "description": "Verify that all currency displays in the invoices table (total amounts) correctly use the updated formatCurrency utility and display the ₹ symbol. No code changes should be needed if the utility is correctly imported and used."
+        },
+        {
+          "path": "frontend/src/components/InvoiceDetail.tsx",
+          "operation": "modify",
+          "description": "Verify that all currency displays in the invoice detail modal (line item prices, subtotals, total amount) correctly use the updated formatCurrency utility and display the ₹ symbol. No code changes should be needed if the utility is correctly imported and used."
+        },
+        {
+          "path": "frontend/src/components/InvoiceForm.tsx",
+          "operation": "modify",
+          "description": "Verify that all currency displays in the invoice form (line item prices, calculated total) correctly use the updated formatCurrency utility and display the ₹ symbol. No code changes should be needed if the utility is correctly imported and used."
+        },
+        {
+          "path": "frontend/src/pages/Expenses.tsx",
+          "operation": "modify",
+          "description": "Verify that all currency displays in the expenses table and category summary section correctly use the updated formatCurrency utility and display the ₹ symbol. No code changes should be needed if the utility is correctly imported and used."
+        },
+        {
+          "path": "frontend/src/components/ExpenseForm.tsx",
+          "operation": "modify",
+          "description": "Verify that any currency displays in the expense form correctly use the updated formatCurrency utility and display the ₹ symbol. No code changes should be needed if the utility is correctly imported and used."
+        },
+        {
+          "path": "frontend/src/pages/Inventory.tsx",
+          "operation": "modify",
+          "description": "Verify that all currency displays in the product/inventory table (unit prices) correctly use the updated formatCurrency utility and display the ₹ symbol. No code changes should be needed if the utility is correctly imported and used."
+        },
+        {
+          "path": "frontend/src/components/ProductForm.tsx",
+          "operation": "modify",
+          "description": "Verify that any currency displays in the product form correctly use the updated formatCurrency utility and display the ₹ symbol. No code changes should be needed if the utility is correctly imported and used."
+        },
+        {
+          "path": "frontend/src/pages/Reports.tsx",
+          "operation": "modify",
+          "description": "Verify that all currency displays in the reports page (monthly revenue bar chart tooltips/labels, expense vs revenue comparison, top products revenue) correctly use the updated formatCurrency utility and display the ₹ symbol. No code changes should be needed if the utility is correctly imported and used."
+        },
+        {
+          "path": "frontend/src/components/CustomerDetail.tsx",
+          "operation": "modify",
+          "description": "Verify that all currency displays in the customer detail modal (invoice totals, total revenue summary) correctly use the updated formatCurrency utility and display the ₹ symbol. No code changes should be needed if the utility is correctly imported and used."
+        }
+      ]
+    }
+  ]
+}

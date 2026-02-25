@@ -1,0 +1,44 @@
+{
+  "kind": "build_request",
+  "title": "Convert all currency displays from USD ($) to Indian Rupees (₹)",
+  "projectName": "BizSolve",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "text": "Convert all currency displays throughout the application from US Dollars ($) to Indian Rupees (₹). Update the currency formatting utility in frontend/src/lib/utils.ts so that the formatCurrency (or equivalent) function uses the 'en-IN' locale and 'INR' currency code, rendering the ₹ symbol instead of $. Ensure this change propagates to all pages and components that display monetary values: Dashboard metrics (total revenue, monthly revenue summary), Invoices (line item prices, totals, invoice summary), Expenses (amounts, category summaries), Inventory/Products (unit prices), Reports (revenue charts, expense vs revenue breakdown, top products).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-7"
+        ],
+        "quotes": [
+          "Don't use dollers use rupees"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The formatCurrency utility uses locale 'en-IN' and currency 'INR', displaying ₹ symbol.",
+        "Dashboard total revenue and monthly revenue figures display with ₹ symbol.",
+        "Invoice line item prices, subtotals, and totals display with ₹ symbol.",
+        "Expense amounts and category-grouped totals display with ₹ symbol.",
+        "Product/Inventory unit prices display with ₹ symbol.",
+        "Reports page revenue bars, expense vs revenue comparison, and top products revenue display with ₹ symbol.",
+        "No $ symbol appears anywhere in the application UI."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not alter any files listed under frontend.immutablePaths.",
+    "Do not change the backend data model or storage; this is a display-only currency change.",
+    "All other existing functionality must remain unaffected."
+  ],
+  "nonGoals": [
+    "Adding multi-currency support or currency conversion logic.",
+    "Changing the backend numeric storage format.",
+    "Modifying any authentication or identity-related code."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

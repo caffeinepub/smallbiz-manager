@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-convert-all-currency-displays-throughout-the-application-from-us-dollars-to-indian-rupees-update-the-currency-formatting-utility-in-frontend-src-lib-utils-ts-so-that-the-formatcurrency-or-equivalent-function-uses-the-en-in-locale-and-inr-currency-code-rendering-the-symbol-instead-of-ensure-this-change-propagates-to-all-pages-and-components-that-display-monetary-values-dashboard-metrics-total-revenue-monthly-revenue-summary-invoices-line-item-prices-totals-invoice-summary-expenses-amounts-category-summaries-inventory-products-unit-prices-reports-revenue-charts-expense-vs-revenue-breakdown-top-products",
+      "featureTitle": "Convert all currency displays throughout the application from US Dollars ($) to Indian Rupees (₹). Update the currency formatting utility in frontend/src/lib/utils.ts so that the formatCurrency (or equivalent) function uses the 'en-IN' locale and 'INR' currency code, rendering the ₹ symbol instead of $. Ensure this change propagates to all pages and components that display monetary values: Dashboard metrics (total revenue, monthly revenue summary), Invoices (line item prices, totals, invoice summary), Expenses (amounts, category summaries), Inventory/Products (unit prices), Reports (revenue charts, expense vs revenue breakdown, top products).",
+      "files": [
+        "frontend/src/lib/utils.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
